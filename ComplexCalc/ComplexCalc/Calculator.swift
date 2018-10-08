@@ -59,6 +59,10 @@ class Calculator {
         return Double(add(args)) / Double(count(args))
     }
     
+    public func mathOp(lhs: Double, rhs: Double, op: (Double, Double) -> Double) -> Double {
+        return op(lhs, rhs)
+    }
+    
     public func mathOp(args: [Double], beg: Double, op: (Double, Double) -> Double) -> Double {
         return args.reduce(beg, op)
     }
