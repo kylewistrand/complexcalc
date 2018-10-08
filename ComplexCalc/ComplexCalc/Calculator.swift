@@ -23,6 +23,10 @@ class Calculator {
         return (lhs.0 + rhs.0, lhs.1 + rhs.1)
     }
     
+    public func add(lhs: [String: Int], rhs: [String: Int]) -> [String: Int] {
+        return ["x": lhs["x"]! + rhs["x"]!, "y": lhs["y"]! + rhs["y"]!]
+    }
+    
     public func multiply(_ args: [Double]) -> Double {
         return args.reduce(1, *)
     }
@@ -37,6 +41,10 @@ class Calculator {
     
     public func subtract(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
         return (lhs.0 - rhs.0, lhs.1 - rhs.1)
+    }
+    
+    public func subtract(lhs: [String: Int], rhs: [String: Int]) -> [String: Int] {
+        return ["x": lhs["x"]! - rhs["x"]!, "y": lhs["y"]! - rhs["y"]!]
     }
     
     public func divide(lhs: Double, rhs: Double) -> Double {
