@@ -19,6 +19,10 @@ class Calculator {
         return lhs + rhs
     }
     
+    public func add(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
+        return (lhs.0 + rhs.0, lhs.1 + rhs.1)
+    }
+    
     public func multiply(_ args: [Double]) -> Double {
         return args.reduce(1, *)
     }
@@ -31,6 +35,10 @@ class Calculator {
         return lhs - rhs
     }
     
+    public func subtract(lhs: (Int, Int), rhs: (Int, Int)) -> (Int, Int) {
+        return (lhs.0 - rhs.0, lhs.1 - rhs.1)
+    }
+    
     public func divide(lhs: Double, rhs: Double) -> Double {
         return lhs / rhs
     }
@@ -41,5 +49,9 @@ class Calculator {
     
     public func avg(_ args: [Double]) -> Double {
         return Double(add(args)) / Double(count(args))
+    }
+    
+    public func mathOp(args: [Double], beg: Double, op: (Double, Double) -> Double) -> Double {
+        return args.reduce(beg, op)
     }
 }
