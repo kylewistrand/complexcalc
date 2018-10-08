@@ -13,7 +13,12 @@ print("UW Complex Calculator v0.1")
 let calc = Calculator()  // Don't change this declaration name; it's used in all the tests below
 
 // ====> Add your own tests here if you wish <====
-
+assert(calc.add(lhs: 2.2, rhs: 2.2) == 4.4)
+assert(calc.subtract(lhs: 2, rhs: 2.5) == -0.5)
+assert(calc.multiply(lhs: 2.5, rhs: 3.5) == 8.75)
+assert(calc.divide(lhs: 8.75, rhs: 2.5) == 3.5)
+assert(calc.add([1.1, 2.2, 3.3, 4.4, 5.5]) == 16.5)
+assert(calc.multiply([1.5, 2.5, 3.5, 4.5, 5.5]) == 324.84375)
 
 // ====> Do not modify code in this section <====
 assert(calc.add(lhs: 2, rhs: 2) == 4)
